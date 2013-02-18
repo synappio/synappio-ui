@@ -1,0 +1,60 @@
+{"reports":[
+  {
+    "title":"Deliverability",
+    "description":"Deliverability has a description. Deliverability has a description. Deliverability has a description. Deliverability has a description. Deliverability has a description.",
+    "price": 20,
+    "purchased": false,
+    "data": [
+      {"label": "Series1", "data": 10},
+      {"label": "Series2", "data": 30},
+      {"label": "Series3", "data": 90},
+      {"label": "Series4", "data": 70}
+    ]
+  },
+  {
+    "title":"Demographic",
+    "description":"Demographic segmentation breaks your list down by demographic category (big spenders, college students, etc.)",
+    "price": 20,
+    "purchased": false,
+    "data": [
+      {"label": "Series1", "data": 50},
+      {"label": "Series2", "data": 10},
+      {"label": "Series3", "data": 100},
+      {"label": "Series4", "data": 30}
+    ]
+  },
+  {
+    "title":"Social",
+    "description":"Social has a description. Social has a description. Social has a description. Social has a description. Social has a description.",
+    "price": 20,
+    "purchased": false,
+    "data": [
+      {"label": "Series1", "data": 20},
+      {"label": "Series2", "data": 30},
+      {"label": "Series3", "data": 60}
+    ]
+    },
+  {
+    "title":"Openability",
+    "description":"Adds a column to your list indicating how likely it is a user will open your emails",
+    "price": 20,
+    "purchased": false,
+    "data": [
+      {"label": "Series1", "data": 60},
+      {"label": "Series2", "data": 30},
+      {"label": "Series3", "data": 90}
+    ]
+    },
+  {
+    "title":"Anti-spam",
+    "description":"Anti-spam has a description. Anti-spam has a description. Anti-spam has a description. Anti-spam has a description. Anti-spam has a description.",
+    "price": 20,
+    "purchased": false,
+    "data": [
+      {"label": "Series1", "data": 10},
+      {"label": "Series2", "data": 30},
+      {"label": "Series3", "data": 20},
+      {"label": "Series4", "data": 50}
+    ]
+    }
+]}
