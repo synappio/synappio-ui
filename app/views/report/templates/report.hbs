@@ -8,5 +8,9 @@
     <i class="report-info-button icon-info-sign" data-content="{{description}}"
       data-title="{{title}} Report" data-trigger="hover" data-placement="top"></i>
   </div>
+  {{#if purchased}}
+  <a class="btn disabled">Already Purchased</a>
+  {{else}}
   <a class="report-start-buy-button btn">Buy for {{formatCurrency price}}</a>
+  {{/if}}
 </div>
