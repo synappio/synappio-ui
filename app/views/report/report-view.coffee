@@ -1,5 +1,6 @@
 template = require './templates/report'
 View = require 'views/base/view'
+ReportPurchaseView = require 'views/report/report-purchase-view'
 
 module.exports = class ReportView extends View
   className: 'report'
@@ -9,8 +10,8 @@ module.exports = class ReportView extends View
   initialize: ->
     super
     @delegate 'click', '.report-start-buy-button', @startBuy
-    @delegate 'click', '.report-complete-buy-button', @completeBuy
 
+    # listen for window resizes to keep the chart size up to date
     resizeTimer = null
     $(window).bind "resize", =>
       clearTimeout resizeTimer
@@ -22,7 +23,9 @@ module.exports = class ReportView extends View
 
   render: ->
     super
-    @makePopups()
+    # make popup
+    $ele = @$el.find 'i.report-info-button'
+    $ele.popover()
     # HACK I can't get chaplin to say when the view's in the DOM
     setTimeout @makeChart, 1000
 
@@ -45,12 +48,11 @@ module.exports = class ReportView extends View
         
     $.plot(@$el.find('div.chart'), @model.get('data'), options);
 
-  makePopups: ->
-    $ele = @$el.find 'i.report-info-button'
-    $ele.popover()
-
   startBuy: (event) =>
-    console.log "startBuy"
-
-  completeBuy: (event) =>
-    console.log "completeBuy"
+    if @subview('purchase')
+      @subview('purchase').show()
+    else
+      @subview 'purchase', new ReportPurchaseView
+        model: @model,
+        container: @$el
+      @subview('purchase').render()
